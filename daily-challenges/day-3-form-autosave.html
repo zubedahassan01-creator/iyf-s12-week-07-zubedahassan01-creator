@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Auto-Save Challenge</title>
+        <style>
+            body {
+                max-width: 620px;
+                margin: 10vh auto;
+                padding: 24px;
+                color: #262b2a;
+                background: #f5f4ef;
+                font:
+                    1rem/1.5 system-ui,
+                    sans-serif;
+            }
+            form {
+                display: grid;
+                gap: 14px;
+            }
+            label {
+                display: grid;
+                gap: 5px;
+            }
+            input,
+            textarea,
+            button {
+                padding: 11px;
+                border: 1px solid #ddd;
+                border-radius: 9px;
+                font: inherit;
+            }
+            button {
+                cursor: pointer;
+            }
+            #save-status {
+                min-height: 1.5em;
+            }
+        </style>
+        <script type="module" src="day-3-form-autosave.js"></script>
+    </head>
+    <body>
+        <a href="../index.html">← Back to the To-Do List</a>
+        <h1>Day 3 · Form auto-save</h1>
+        <form id="contact-form">
+            <label>Name <input name="name" autocomplete="name" required /></label>
+            <label>Email <input name="email" type="email" autocomplete="email" required /></label>
+            <label>Message <textarea name="message" rows="4" required></textarea></label>
+            <button type="submit">Submit and clear draft</button>
+        </form>
+        <p id="save-status" aria-live="polite">Drafts save every five seconds.</p>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#f5f4ef" />
+        <title>Market Basket — Shopping Cart</title>
+        <link rel="stylesheet" href="cart.css" />
+        <script type="module" src="cart.js"></script>
+    </head>
+    <body>
+        <main class="cart-shell">
+            <header class="cart-header">
+                <a href="../index.html">← Back to Little List</a>
+                <p class="eyebrow">Lesson 13 · State and persistence</p>
+                <h1>Market <span>Basket</span></h1>
+                <p>A small collection of everyday favourites, saved right in this browser.</p>
+            </header>
+            <section class="cart-layout" aria-label="Shopping basket">
+                <div>
+                    <h2>Pantry picks</h2>
+                    <div id="products" class="products"></div>
+                </div>
+                <aside class="basket-card" aria-labelledby="basket-title">
+                    <div class="basket-heading">
+                        <h2 id="basket-title">Your basket</h2>
+                        <span id="cart-count" class="cart-count">0 items</span>
+                    </div>
+                    <div id="cart-items" class="cart-items" aria-live="polite"></div>
+                    <div class="basket-total">
+                        <span>Total</span><strong id="cart-total">KES 0</strong>
+                    </div>
+                    <button id="clear-cart" class="clear-cart" type="button" disabled>
+                        Clear basket
+                    </button>
+                    <p class="cart-note" id="cart-message" aria-live="polite">
+                        Your basket is saved on this device.
+                    </p>
+                </aside>
+            </section>
+        </main>
+    </body>
+</html>

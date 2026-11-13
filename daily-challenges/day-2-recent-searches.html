@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recent Searches Challenge</title>
+        <style>
+            body {
+                max-width: 640px;
+                margin: 12vh auto;
+                padding: 24px;
+                color: #262b2a;
+                background: #f5f4ef;
+                font:
+                    1rem/1.5 system-ui,
+                    sans-serif;
+            }
+            form {
+                display: flex;
+                gap: 8px;
+            }
+            input,
+            button {
+                min-width: 0;
+                padding: 11px;
+                border: 1px solid #ddd;
+                border-radius: 9px;
+                font: inherit;
+            }
+            input {
+                flex: 1;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 0;
+                list-style: none;
+            }
+            li button {
+                cursor: pointer;
+            }
+            details {
+                margin-top: 18px;
+            }
+            summary {
+                cursor: pointer;
+                font-weight: 700;
+            }
+            #search-result {
+                min-height: 1.5em;
+            }
+        </style>
+        <script type="module" src="day-2-recent-searches.js"></script>
+    </head>
+    <body>
+        <a href="../index.html">← Back to the To-Do List</a>
+        <h1>Day 2 · Recent searches</h1>
+        <form id="search-form">
+            <label class="visually-hidden" for="search-input">Search term</label>
+            <input id="search-input" type="search" placeholder="Try a topic" autocomplete="off" />
+            <button type="submit">Search</button>
+        </form>
+        <details id="history-dropdown">
+            <summary>Recent searches</summary>
+            <ul id="recent-searches" aria-label="Recent searches"></ul>
+        </details>
+        <p id="search-result" aria-live="polite"></p>
+    </body>
+</html>

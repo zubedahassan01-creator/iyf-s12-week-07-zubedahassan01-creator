@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Theme Persistence Challenge</title>
+        <style>
+            :root {
+                font-family: system-ui, sans-serif;
+                color: #252b29;
+                background: #f5f4ef;
+            }
+            [data-theme="dark"] {
+                color: #f5f4ef;
+                background: #202522;
+            }
+            body {
+                max-width: 620px;
+                margin: 15vh auto;
+                padding: 24px;
+            }
+            button {
+                padding: 11px 15px;
+                border: 0;
+                border-radius: 10px;
+                cursor: pointer;
+                font: inherit;
+            }
+            a {
+                color: inherit;
+            }
+        </style>
+        <script type="module" src="day-1-theme.js"></script>
+    </head>
+    <body>
+        <a href="../index.html">← Back to the To-Do List</a>
+        <h1>Day 1 · Theme persistence</h1>
+        <p>Your choice is saved and restored the next time this page loads.</p>
+        <button id="theme-toggle" type="button" aria-pressed="false">Switch to dark theme</button>
+    </body>
+</html>
