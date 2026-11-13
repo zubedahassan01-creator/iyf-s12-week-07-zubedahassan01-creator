@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f4ef">
+    <title>Little List — To-Do</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <main class="page-shell">
+        <header class="page-heading">
+            <a class="brand" href="index.html" aria-label="Little List home">
+                <span class="brand-mark" aria-hidden="true">✳</span>
+                <span>little list</span>
+            </a>
+            <p class="eyebrow">A little clarity for today</p>
+            <h1>Make room for<br><span>what matters.</span></h1>
+            <p class="intro">Write it down, take it one step at a time, and enjoy the small wins.</p>
+        </header>
+
+        <section class="todo-card" aria-labelledby="list-title">
+            <div class="card-topline">
+                <div>
+                    <p class="eyebrow">Your day, your pace</p>
+                    <h2 id="list-title">Today's list</h2>
+                </div>
+                <span class="date-badge" id="today-date"></span>
+            </div>
+
+            <form id="todo-form" class="add-form" autocomplete="off">
+                <label class="visually-hidden" for="todo-input">Add a task</label>
+                <input id="todo-input" name="task" type="text" placeholder="What would you like to do?" maxlength="160" aria-describedby="form-message">
+                <button class="add-button" type="submit"><span aria-hidden="true">＋</span> Add task</button>
+            </form>
+            <p class="form-message" id="form-message" aria-live="polite"></p>
+
+            <div class="list-toolbar">
+                <div class="filters" role="group" aria-label="Filter tasks">
+                    <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="filter-button" type="button" data-filter="active" aria-pressed="false">Active</button>
+                    <button class="filter-button" type="button" data-filter="completed" aria-pressed="false">Completed</button>
+                </div>
+                <span class="count-pill" id="items-left" aria-live="polite">0 items left</span>
+            </div>
+
+            <ul id="todo-list" class="todo-list" aria-label="Tasks"></ul>
+            <div id="empty-state" class="empty-state">
+                <span class="empty-icon" aria-hidden="true">✧</span>
+                <p class="empty-title">A fresh page.</p>
+                <p class="empty-copy">Add a task above and give your day a gentle starting point.</p>
+            </div>
+
+            <footer class="card-footer">
+                <span class="keyboard-hint"><kbd>Enter</kbd> to add</span>
+                <button id="clear-completed" class="clear-button" type="button" disabled>Clear completed</button>
+            </footer>
+        </section>
+
+        <p class="page-note">Small steps still move you forward <span aria-hidden="true">✦</span></p>
+    </main>
+</body>
+</html>
